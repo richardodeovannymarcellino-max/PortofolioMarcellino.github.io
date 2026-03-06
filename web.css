@@ -7,18 +7,18 @@ body {
 }
 
 /* Navbar */
-nav ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  padding: 1rem;
-  margin: 0;
-  background-color: transparent;
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row;   /* tetap horizontal */
+    flex-wrap: wrap;       /* biar kalau terlalu panjang, turun ke baris berikut */
+    justify-content: center; /* rata tengah */
+  }
+
+  nav ul li {
+    margin: 0.5rem; /* beri jarak antar menu */
+  }
 }
 
-nav ul li {
-  margin-left: 2rem;
-}
 
 nav ul li a {
   color: #f1f5f9;
