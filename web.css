@@ -1,0 +1,124 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: #f1f5f9;
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background-color: transparent;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  flex-wrap: wrap; /* agar turun di layar kecil */
+}
+
+.profile {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #f97316;
+  margin-right: 2rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  color: #f97316;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f97316;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+}
+
+/* Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background-color: #334155;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e293b;
+  color: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile {
+    margin: 0 auto 1rem;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom di HP */
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
