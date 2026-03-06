@@ -39,7 +39,7 @@ nav ul li a {
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 3rem;
 }
 
