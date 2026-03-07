@@ -89,6 +89,13 @@ section {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* card naik sedikit */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* bayangan lebih tebal */
 }
 
 /* Footer */
