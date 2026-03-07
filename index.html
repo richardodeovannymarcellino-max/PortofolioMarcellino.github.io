@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="web.css" />
 </head>
 <body>
-  <header>
+  <header class="hidden">
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
@@ -18,7 +18,7 @@
     </nav>
     <section id="home">
       <div class="hero">
-        <img src="WhatsApp Image 2026-03-06 at 19.22.34.jpeg" alt="Foto Marcell" class="profile" />
+        <img src="imagee/WhatsApp Image 2026-03-06 at 19.22.34.jpeg" alt="Foto Marcell" class="profile" />
         <div class="intro">
           <h1>Richardo Deovanny Marcellino</h1>
           <h2>Portofolio</h2>
@@ -29,7 +29,7 @@
     </section>
   </header>
 
-  <main>
+  <main class="hidden">
     <section id="about">
       <h2>Tentang Saya</h2>
       <p>Nama saya Richardo Deovanny Marcellino, biasa dipanggil Marcell. Saya lahir pada 3 Desember 2009 
@@ -59,11 +59,45 @@
     <section id="contact">
       <h2>Kontak</h2>
       <p>Silakan hubungi saya melalui email atau media sosial.</p>
-      <a href="https://www.instagram.com/marcellinorichardo_?igsh=OWNlOTN1bWtoMG1u&utm_source=qr" class="btn">Kirim Pesan</a>
+      <a href="mailto:kira@example.com" class="btn">Kirim Pesan</a>
     </section>
   </main>
 
-  <footer>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Selamat Datang!</h2>
+    <p>Tekan tombol untuk mulai melihat portofolio.</p>
+    <button onclick="startWebsite()">Mulai</button>
+  </div>
+</div>
+
+
+<script>
+  // Pop-up muncul otomatis saat halaman dimuat
+  window.onload = function() {
+    document.getElementById("popup").classList.add("show");
+  };
+
+  // Fungsi untuk menutup pop-up dan memunculkan elemen dengan animasi
+  function startWebsite() {
+    document.getElementById("popup").classList.remove("show");
+
+    // Ambil semua elemen utama
+    const elements = document.querySelectorAll("header, main, footer");
+
+    // Tambahkan animasi fade-in satu per satu
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("hidden");
+        el.classList.add("fade-in");
+      }, index * 600); // jeda 0.6 detik antar elemen
+    });
+  }
+</script>
+
+
+
+  <footer class="hidden">
     <p>© 2026 MARCELL</p>
   </footer>
 </body>
